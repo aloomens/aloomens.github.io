@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Vocal Studio: free lead-vocal plugin for Windows (VST3)</title>
+<meta name="description" content="A complete, free lead-vocal channel for Windows: neural noise removal, natural pitch correction, de-essing and resonance control, tone EQ, dynamics, reverb, delay and doubler. VST3 plus standalone app.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:title" content="Open Vocal Studio">
+<meta property="og:description" content="A complete, free lead-vocal channel for Windows. VST3 plus standalone app.">
+<meta property="og:image" content="https://aloomens.github.io/assets/img/open-vocal-studio.png">
+</head>
+<body class="p-vocal">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../">Al Oomens <span>· audio plugins</span></a>
+    <nav class="nav" aria-label="Products">
+      <a href="../open-vocal-studio/" aria-current="page">Open Vocal Studio</a>
+      <a href="../clean-tone-studio/">Clean Tone Studio</a>
+      <a href="../open-mastering-studio/">Open Mastering Studio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1 class="ptitle">Open Vocal <span class="studio">Studio</span></h1>
+    <p class="tagline">A complete lead-vocal channel in one plugin. It cleans up the recording, corrects the pitch naturally, tames resonances, sibilance and harshness, sets the tone, controls the dynamics and adds reverb and delay.</p>
+    <ul class="badges">
+      <li>Free</li><li>Open source (AGPLv3)</li><li>VST3 + standalone app</li><li>Windows 64-bit</li>
+    </ul>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/aloomens/open-vocal-studio/releases/latest">Download for Windows</a>
+      <a class="btn" href="https://github.com/aloomens/open-vocal-studio">Source code on GitHub</a>
+      <span class="note">Get the <code>-win64.zip</code> from the latest release.</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="shot">
+      <img src="../assets/img/open-vocal-studio.png" alt="Open Vocal Studio: the plugin window with the CLEAN, PITCH, TONE, TONE EQ, DYNAMICS, OUTPUT and SPACE sections" width="1200" height="720">
+      <figcaption>Everything on one screen: clean, pitch, tone, EQ, dynamics, output and space.</figcaption>
+    </figure>
+  </div>
+
+  <section class="wrap" aria-labelledby="quick">
+    <h2 id="quick">Quick start</h2>
+    <ol class="steps">
+      <li>Insert Open Vocal Studio on a vocal track (mono or stereo in, stereo out).</li>
+      <li>Pick a preset: Natural Polish, Pop Lead, Intimate Ballad, Rock Lead, Spoken Word or Tracking (Low Latency).</li>
+      <li>Play 10–30 seconds of the vocal with ANALYZE on, then click it again. It matches the tone EQ to a polished vocal curve and sets the key and scale for pitch correction.</li>
+      <li>Use PROCESSED | ORIGINAL to compare. The original is level-matched, so louder never fools you.</li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="chain">
+    <h2 id="chain">What it does</h2>
+    <p class="lead">The voice is processed in mono, as a voice is a mono source; the doubler, delay and reverb are stereo around it. A true-peak limiter at the end keeps it from ever clipping.</p>
+    <div class="grid">
+      <div class="card"><h3>Clean</h3><ul>
+        <li><b>Denoise</b>: removes noise, hum, hiss, room tone and headphone bleed. In Mix mode it runs DeepFilterNet3, a neural network, with its own fast streaming engine (under 4 % of one CPU core). A voice guard keeps long sung notes from thinning.</li>
+        <li><b>De-room</b> pulls back room reflections; <b>De-plosive</b> catches P and B bursts; <b>Rumble Cut</b> removes low rumble.</li>
+      </ul></div>
+      <div class="card k-pitch"><h3>Pitch</h3><ul>
+        <li>Natural correction: it moves the <i>center</i> of each note and leaves vibrato, scoops and bends as sung.</li>
+        <li>Formants stay put, so the voice keeps its character. At Strength 0 it's bit-transparent.</li>
+        <li>Key and scale set by ANALYZE (or by hand), including major, minor, pentatonic, blues and modes. Turn individual notes off.</li>
+      </ul></div>
+      <div class="card"><h3>Tone</h3><ul>
+        <li><b>Resonance</b> turns down narrow ringing regions only while they ring.</li>
+        <li><b>Smooth</b> softens a harsh 2–5 kHz edge; <b>De-ess</b> works on S sounds only.</li>
+        <li><b>Consonant</b> softens hard K and T clicks; <b>Breath</b> lowers breaths between phrases; <b>Air</b> adds sheen.</li>
+      </ul></div>
+      <div class="card"><h3>Tone EQ</h3><p>Nine bands from 63 Hz to 12.5 kHz. ANALYZE fits them toward the curve of a finished lead vocal (80 % of the difference, at most ±6 dB per band). Edit them afterwards, or scale them all with EQ Amount.</p></div>
+      <div class="card k-dyn"><h3>Dynamics</h3><ul>
+        <li><b>Rider</b> evens out the level between phrases before the compressor.</li>
+        <li><b>Compress</b> follows the voice's own level, so a setting does the same at any input level, with program-dependent release and automatic make-up.</li>
+      </ul></div>
+      <div class="card k-space"><h3>Space</h3><ul>
+        <li><b>Reverb</b>: Plate (bright, dense) or Room (shorter, darker), with Duck so it blooms in the gaps.</li>
+        <li><b>Delay</b>: a short slap, or synced to your DAW tempo with straight, triplet and dotted values.</li>
+        <li><b>Doubler</b>: double-tracked width, from subtle to a clear second take.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="modes">
+    <h2 id="modes">Two modes</h2>
+    <div class="feature">
+      <div class="card"><h3>Mix (best quality)</h3><p>For mixing. Uses the neural denoiser and the finest analysis. About 167 ms of latency at 48 kHz, reported to your DAW, which compensates automatically on playback.</p></div>
+      <div class="card"><h3>Track (low latency)</h3><p>For recording through the plugin: 5.8 ms with pitch correction off, 55 ms with it on. Switch to it (or the Tracking preset) while you record, then back to Mix.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="app">
+    <h2 id="app">Standalone app</h2>
+    <p class="lead">Process a vocal without a DAW, live or from a file.</p>
+    <div class="grid">
+      <div class="card"><h3>Live</h3><p>Sing through your audio interface (ASIO supported). Use headphones to avoid feedback.</p></div>
+      <div class="card"><h3>From a file</h3><p>Open a WAV, AIFF, FLAC, MP3 or Ogg Vorbis recording, play and loop it through the chain, then Save Processed… as a 24-bit WAV that lines up with the original.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="install">
+    <h2 id="install">Install</h2>
+    <ol class="steps">
+      <li>Download <code>OpenVocalStudio-x.y.z-win64.zip</code> from the <a href="https://github.com/aloomens/open-vocal-studio/releases/latest">latest release</a> and unzip it.</li>
+      <li>Double-click <code>Install VST3.bat</code> and click Yes when Windows asks for permission. (Or copy the <code>.vst3</code> folder into <code>C:\Program Files\Common Files\VST3</code>.)</li>
+      <li>Rescan plugins in your DAW and insert Open Vocal Studio on your vocal track.</li>
+      <li>The standalone app runs from anywhere: no install needed.</li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="specs">
+    <h2 id="specs">Details</h2>
+    <table class="specs">
+      <tr><th>System</th><td>Windows, 64-bit. Any VST3 host; the app supports ASIO and Windows audio.</td></tr>
+      <tr><th>Latency</th><td>Mix mode about 167 ms; Track mode 5.8 ms (55 ms with pitch correction). Always reported to your DAW.</td></tr>
+      <tr><th>Presets</th><td>Natural Polish, Pop Lead, Intimate Ballad, Rock Lead, Spoken Word and Tracking (Low Latency), plus your own.</td></tr>
+      <tr><th>First start</th><td>Windows SmartScreen may warn that the app is from an unknown publisher (it isn't code-signed): click More info → Run anyway.</td></tr>
+      <tr><th>License</th><td>Free software under the GNU AGPLv3. Copyright © 2026 Al Oomens. Use it for anything; if you share it, include the source zip. No warranty. The neural denoiser uses the DeepFilterNet3 model (see the third-party notices in the download).</td></tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Also free: <a href="../clean-tone-studio/">Clean Tone Studio</a> for clean guitar · <a href="../open-mastering-studio/">Open Mastering Studio</a> for mastering.</p>
+    <p>Made by Al Oomens. <a href="https://github.com/aloomens/open-vocal-studio">Source code</a> · <a href="https://github.com/aloomens/open-vocal-studio/blob/main/LICENSE.txt">License (AGPLv3)</a> · <a href="https://github.com/aloomens/open-vocal-studio/issues">Report a problem</a></p>
+    <p>VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH.</p>
+  </div>
+</footer>
+</body>
+</html>

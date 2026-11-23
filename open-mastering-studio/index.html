@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Mastering Studio: free mastering plugin for Windows (VST3)</title>
+<meta name="description" content="A complete, free mastering chain for Windows: EQ, multiband and glue compression, saturation, stereo imaging, a true-peak limiter, dither and loudness metering, with a Master Assistant. VST3 plus standalone app.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:title" content="Open Mastering Studio">
+<meta property="og:description" content="A complete, free mastering chain for Windows, with a Master Assistant. VST3 plus standalone app.">
+<meta property="og:image" content="https://aloomens.github.io/assets/img/open-mastering-studio.png">
+</head>
+<body class="p-mastering">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../">Al Oomens <span>· audio plugins</span></a>
+    <nav class="nav" aria-label="Products">
+      <a href="../open-vocal-studio/">Open Vocal Studio</a>
+      <a href="../clean-tone-studio/">Clean Tone Studio</a>
+      <a href="../open-mastering-studio/" aria-current="page">Open Mastering Studio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1 class="ptitle">Open Mastering <span class="studio">Studio</span></h1>
+    <p class="tagline">A complete mastering chain in one plugin, with an assistant that listens to your track and sets everything up for a clean, clear, loud and still dynamic master.</p>
+    <ul class="badges">
+      <li>Free</li><li>Open source (AGPLv3)</li><li>VST3 + standalone app</li><li>Windows 64-bit</li>
+    </ul>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/aloomens/open-mastering-studio/releases/latest">Download for Windows</a>
+      <a class="btn" href="https://github.com/aloomens/open-mastering-studio">Source code on GitHub</a>
+      <span class="note">Get the <code>-win64.zip</code> from the latest release.</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="shot">
+      <img src="../assets/img/open-mastering-studio.png" alt="Open Mastering Studio: the EQ view with the spectrum analyzer, the module chain and the loudness meters" width="1320" height="800">
+      <figcaption>The EQ view: drag the points on the analyzer; the meters on the right show loudness, true peak and gain reduction.</figcaption>
+    </figure>
+  </div>
+
+  <section class="wrap" aria-labelledby="chain">
+    <h2 id="chain">The chain</h2>
+    <p class="lead">Seven modules in mastering order. Click one to edit it; each switches on and off without a click. The chart above the controls follows the module you select.</p>
+    <p class="chain"><b>Input</b> → <b>EQ</b> → <b>Multiband</b> → <b>Glue Comp</b> → <b>Saturation</b> → <b>Stereo</b> → <b>Limiter</b> → <b>Output</b> + <b>Dither</b></p>
+    <div class="grid" style="margin-top:14px">
+      <div class="card"><h3>EQ</h3><p>Low and high cut, two shelves and three bells, on stereo, mid or side. Drag the points on the live analyzer.</p></div>
+      <div class="card"><h3>Multiband</h3><p>Three bands, each with its own compressor. Optional linear-phase crossovers and program-dependent release.</p></div>
+      <div class="card"><h3>Glue Comp</h3><p>A stereo-linked bus compressor with a soft knee, a sidechain low cut and a parallel mix.</p></div>
+      <div class="card"><h3>Saturation</h3><p>Tape, Tube and Soft Clip, plus modeled Tape (magnetic hysteresis) and modeled Tube. 8× oversampled, so it stays clean on bright material.</p></div>
+      <div class="card"><h3>Stereo</h3><p>Width in three bands, Mono Bass for a tight low end, and Mono-Safe so widening never pushes the correlation below zero.</p></div>
+      <div class="card"><h3>Limiter</h3><p>A look-ahead, true-peak limiter (Classic or Transparent style) that holds your ceiling, usually −1 dBTP for streaming.</p></div>
+      <div class="card"><h3>Output and dither</h3><p>Final trim and TPDF dither for 16 or 24-bit, with psychoacoustic noise shaping.</p></div>
+      <div class="card"><h3>Meters</h3><p>EBU R128 / BS.1770 loudness: integrated, short-term, momentary, loudness range and true peak, plus gain reduction and correlation.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="assistant">
+    <h2 id="assistant">Master Assistant</h2>
+    <p class="lead">A starting point in seconds, which you then shape by ear.</p>
+    <div class="feature">
+      <div class="card">
+        <h3>How it works</h3>
+        <ul>
+          <li>Play your mix (or press LEARN in the plugin while the song plays).</li>
+          <li>Choose a target: a genre curve (Pop, Rock, Hip-Hop, R&amp;B, EDM, Singer-Songwriter, Acoustic, Jazz, Classical) or your own reference tracks.</li>
+          <li>Pick a style and a loudness, then press Analyze &amp; Apply.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What it sets</h3>
+        <ul>
+          <li>EQ moves toward the target's tonal balance.</li>
+          <li>Glue, multiband, saturation and width only where your mix needs them.</li>
+          <li>Limiter gain to reach the loudness you chose, with a −1 dBTP ceiling, checked by rendering the result.</li>
+          <li>Revert puts your previous settings back.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="honest">
+    <h2 id="honest">Comparing honestly</h2>
+    <div class="grid">
+      <div class="card"><h3>Level-matched Compare</h3><p>Hear the unprocessed mix at the same loudness as the master, time-aligned, so you judge tone rather than volume.</p></div>
+      <div class="card"><h3>A / B slots</h3><p>Two complete sets of settings to switch between, with Copy A&gt;B.</p></div>
+      <div class="card"><h3>Standalone app</h3><p>Open a WAV, AIFF, FLAC, MP3 or OGG file, shape the master while it plays, then Export Master… to WAV or FLAC.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="install">
+    <h2 id="install">Install</h2>
+    <ol class="steps">
+      <li>Download <code>OpenMasteringStudio-x.y.z-win64.zip</code> from the <a href="https://github.com/aloomens/open-mastering-studio/releases/latest">latest release</a> and unzip it.</li>
+      <li>Double-click <code>Install VST3.bat</code> and click Yes when Windows asks for permission. (Or copy the <code>Open Mastering Studio.vst3</code> folder into <code>C:\Program Files\Common Files\VST3</code>.)</li>
+      <li>Rescan plugins in your DAW and insert Open Mastering Studio last on your stereo master bus.</li>
+      <li>The standalone app (<code>Open Mastering Studio.exe</code>) runs from anywhere: no install needed.</li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="specs">
+    <h2 id="specs">Details</h2>
+    <table class="specs">
+      <tr><th>System</th><td>Windows, 64-bit. Any VST3 host; the app supports ASIO and Windows audio.</td></tr>
+      <tr><th>Latency</th><td>About 7.5 ms, reported to your DAW, which compensates automatically. Each linear-phase option adds about 90 ms.</td></tr>
+      <tr><th>Sample rates</th><td>44.1 to 192 kHz.</td></tr>
+      <tr><th>Presets</th><td>Default, Streaming Ready (−14), Loud &amp; Punchy (−9), Warm Analog, Wide &amp; Airy, Bass Control, Gentle Glue and Podcast / Voice (−16), plus your own.</td></tr>
+      <tr><th>First start</th><td>Windows SmartScreen may warn that the app is from an unknown publisher (it isn't code-signed): click More info → Run anyway.</td></tr>
+      <tr><th>Measurements</th><td>Distortion, aliasing, true peak, latency and CPU are in <code>MEASUREMENTS.md</code> in the download.</td></tr>
+      <tr><th>License</th><td>Free software under the GNU AGPLv3. Copyright © 2026 Al Oomens. Use it for anything; if you share it, include the source zip. No warranty.</td></tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Also free: <a href="../open-vocal-studio/">Open Vocal Studio</a> for lead vocals · <a href="../clean-tone-studio/">Clean Tone Studio</a> for clean guitar.</p>
+    <p>Made by Al Oomens. <a href="https://github.com/aloomens/open-mastering-studio">Source code</a> · <a href="https://github.com/aloomens/open-mastering-studio/blob/main/LICENSE.txt">License (AGPLv3)</a> · <a href="https://github.com/aloomens/open-mastering-studio/issues">Report a problem</a></p>
+    <p>VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH.</p>
+  </div>
+</footer>
+</body>
+</html>

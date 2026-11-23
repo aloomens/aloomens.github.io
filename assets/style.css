@@ -1,0 +1,140 @@
+/* Al Oomens - audio plugins. The look follows the plugins themselves (PluginStandards/FamilyLook.h). */
+:root {
+  --bg: #16171a;
+  --panel: #212328;
+  --panel-2: #1b1c20;
+  --edge: #32353c;
+  --text: #dcd9d2;
+  --dim: #8b8b88;
+  --title: #e4e7ee;
+  --studio: #4fc3f7;
+  --good: #7cc576;
+  --accent: #4fc3f7;          /* each product page sets its own */
+  --accent-ink: #0d1014;      /* text on an accent button */
+  --radius: 8px;
+  --wide: 1120px;
+  font-size: 16px;
+}
+.p-mastering { --accent: #4fc3f7; }
+.p-vocal     { --accent: #e39a6b; }
+.p-cleantone { --accent: #e8a54b; --accent-2: #6fc2c9; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--title); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 0 24px; }
+
+/* ---- Top bar ---- */
+.topbar { border-bottom: 1px solid var(--edge); background: #121316; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; flex-wrap: wrap; }
+.brand { color: var(--title); font-weight: 700; text-decoration: none; letter-spacing: .02em; }
+.brand span { color: var(--dim); font-weight: 400; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav a { color: var(--dim); text-decoration: none; font-size: .92rem; padding: 6px 10px; border-radius: 6px; }
+.nav a:hover { color: var(--title); background: var(--panel); }
+.nav a[aria-current="page"] { color: var(--title); background: var(--panel); }
+
+/* ---- Product title (two-tone, like the plugins) ---- */
+.ptitle { margin: 0; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: .01em; line-height: 1.1; color: var(--title); text-transform: uppercase; }
+.ptitle .studio { color: var(--studio); }
+.ptitle.small { font-size: 1.35rem; }
+
+/* ---- Hero ---- */
+.hero { padding-top: 56px; padding-bottom: 28px; }
+.hero .tagline { font-size: 1.2rem; color: var(--text); max-width: 46rem; margin: 14px 0 0; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.badges li { font-size: .82rem; color: var(--dim); border: 1px solid var(--edge); border-radius: 999px; padding: 3px 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; align-items: center; }
+.btn { display: inline-block; font-weight: 700; text-decoration: none; padding: 11px 20px; border-radius: 8px; border: 1px solid var(--edge); color: var(--title); background: var(--panel); }
+.btn:hover { color: var(--title); border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.08); color: var(--accent-ink); }
+.actions .note { color: var(--dim); font-size: .88rem; }
+
+/* ---- Screenshot ---- */
+.shot { margin: 8px 0 0; }
+.shot img { border-radius: var(--radius); border: 1px solid var(--edge); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.shot figcaption { color: var(--dim); font-size: .85rem; margin-top: 10px; }
+
+/* ---- Sections ---- */
+section { padding-top: 36px; padding-bottom: 36px; }
+h2 { color: var(--title); font-size: 1.5rem; margin: 0 0 6px; }
+h2 + .lead { color: var(--dim); margin: 0 0 22px; max-width: 46rem; }
+h3 { margin: 0 0 8px; font-size: .9rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+h3::after { content: ""; display: block; width: 28px; height: 2px; margin-top: 6px; background: var(--accent); opacity: .35; }
+.c2 h3 { color: var(--accent-2, var(--accent)); }
+.c2 h3::after { background: var(--accent-2, var(--accent)); }
+
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.card { background: var(--panel); border: 1px solid var(--edge); border-radius: var(--radius); padding: 18px 20px; }
+.card p { margin: 0; color: var(--text); }
+.card ul { margin: 0; padding-left: 18px; }
+.card li { margin: 4px 0; }
+
+.feature { display: grid; gap: 28px; grid-template-columns: 1fr 1fr; align-items: start; }
+.feature .card { height: 100%; }
+
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.steps li { counter-increment: step; position: relative; padding: 12px 16px 12px 52px; background: var(--panel); border: 1px solid var(--edge); border-radius: var(--radius); }
+.steps li::before { content: counter(step); position: absolute; left: 14px; top: 11px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: .85rem; display: grid; place-items: center; }
+
+table.specs { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--edge); border-radius: var(--radius); overflow: hidden; }
+table.specs th, table.specs td { text-align: left; padding: 10px 16px; border-top: 1px solid var(--edge); vertical-align: top; }
+table.specs tr:first-child th, table.specs tr:first-child td { border-top: 0; }
+table.specs th { width: 34%; color: var(--dim); font-weight: 600; }
+
+code, kbd { font-family: Consolas, "Cascadia Mono", monospace; font-size: .9em; background: var(--panel-2); border: 1px solid var(--edge); border-radius: 4px; padding: 1px 5px; }
+
+.chain { font-family: Consolas, "Cascadia Mono", monospace; font-size: .88rem; color: var(--dim); background: var(--panel-2); border: 1px solid var(--edge); border-radius: var(--radius); padding: 14px 16px; overflow-x: auto; }
+.chain b { color: var(--title); font-weight: 600; }
+
+/* ---- Home ---- */
+.intro { padding-top: 64px; padding-bottom: 24px; }
+.intro h1 { color: var(--title); font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; margin: 0; }
+.intro p { font-size: 1.15rem; max-width: 44rem; margin: 16px 0 0; }
+.products { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+.pcard { display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--edge); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+.pcard:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--text); }
+.pcard img { aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; border-bottom: 1px solid var(--edge); }
+.pcard .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.pcard .role { color: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.pcard p { margin: 0; }
+.pcard .more { margin-top: auto; padding-top: 6px; color: var(--accent); font-weight: 700; }
+.common { display: grid; gap: 14px; grid-template-columns: repeat(4, 1fr); }
+
+/* ---- Footer ---- */
+footer { border-top: 1px solid var(--edge); margin-top: 40px; padding-top: 28px; padding-bottom: 40px; color: var(--dim); font-size: .88rem; }
+footer p { margin: 4px 0; }
+footer a { color: var(--dim); }
+footer a:hover { color: var(--title); }
+
+/* ---- Small screens ---- */
+@media (max-width: 900px) {
+  .products { grid-template-columns: 1fr; }
+  .common { grid-template-columns: 1fr 1fr; }
+  .feature { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px; }
+  .hero { padding-top: 36px; }
+  .common { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  table.specs th { width: 40%; }
+  .btn { width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { .pcard { transition: none; } .pcard:hover { transform: none; } }
+
+/* Open Vocal Studio's section colors (as in the plugin) */
+.k-pitch { --accent: #8fb8ec; }
+.k-dyn   { --accent: #d9c46a; }
+.k-space { --accent: #6fc2c9; }

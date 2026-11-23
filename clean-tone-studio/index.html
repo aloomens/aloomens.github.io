@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clean Tone Studio: free clean guitar plugin for Windows (VST3)</title>
+<meta name="description" content="A free channel strip for recording clean electric guitar on Windows: pickup voicings, sustain compressor, tube warmth, cabinets and IR loader, tape-style delay and reverb, with Auto Level. VST3 plus standalone ASIO app.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:title" content="Clean Tone Studio">
+<meta property="og:description" content="A free channel strip for recording clean electric guitar on Windows. VST3 plus standalone ASIO app.">
+<meta property="og:image" content="https://aloomens.github.io/assets/img/clean-tone-studio.png">
+</head>
+<body class="p-cleantone">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../">Al Oomens <span>· audio plugins</span></a>
+    <nav class="nav" aria-label="Products">
+      <a href="../open-vocal-studio/">Open Vocal Studio</a>
+      <a href="../clean-tone-studio/" aria-current="page">Clean Tone Studio</a>
+      <a href="../open-mastering-studio/">Open Mastering Studio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1 class="ptitle">Clean Tone <span class="studio">Studio</span></h1>
+    <p class="tagline">A channel strip for recording clean electric guitar: smooth and detailed, full-bodied, with plenty of sustain, a clean reverb and a smooth delay. Voiced for both single-coil and humbucker pickups.</p>
+    <ul class="badges">
+      <li>Free</li><li>Open source (AGPLv3)</li><li>VST3 + standalone ASIO app</li><li>Windows 64-bit</li>
+    </ul>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/aloomens/clean-tone-studio/releases/latest">Download for Windows</a>
+      <a class="btn" href="https://github.com/aloomens/clean-tone-studio">Source code on GitHub</a>
+      <span class="note">Get the <code>-win64.zip</code> from the latest release.</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="shot">
+      <img src="../assets/img/clean-tone-studio.png" alt="Clean Tone Studio: the plugin window with the INPUT, SUSTAIN / DYNAMICS, OUTPUT, TONE &amp; CABINET, DELAY and REVERB sections" width="2120" height="1220">
+      <figcaption>Input, sustain, tone and cabinet, delay and reverb, with Auto Level keeping the volume steady while you shape the sound.</figcaption>
+    </figure>
+  </div>
+
+  <section class="wrap" aria-labelledby="chain">
+    <h2 id="chain">What it does</h2>
+    <p class="lead">Put it on a mono guitar track: it outputs stereo, so the delay and reverb spread around a centered guitar.</p>
+    <div class="grid">
+      <div class="card"><h3>Input</h3><ul>
+        <li><b>Pickup</b>: a corrective voicing for Single Coil (more body, softer ice-pick) or Humbucker (less mud, more detail), or Flat.</li>
+        <li><b>Hum Filter</b> notches 50 or 60 Hz mains hum; a smooth <b>Noise Gate</b> keeps hiss down at high sustain.</li>
+      </ul></div>
+      <div class="card"><h3>Sustain / Dynamics</h3><ul>
+        <li>A smooth optical-style compressor: notes ring longer without a jump in volume.</li>
+        <li><b>Pick</b> brings each note's attack forward or softens it; <b>Blend</b> mixes in the dry signal; <b>LOOKAHEAD</b> catches pick attacks early.</li>
+      </ul></div>
+      <div class="card"><h3>Tone &amp; Cabinet</h3><ul>
+        <li><b>Warmth</b>: a tube-style stage, mostly even harmonics, with a bias that breathes with your picking. 4× oversampled; 0 % is completely clean.</li>
+        <li>Bass, Mid, Presence, Treble, Low and High Cut, and <b>Clarity</b>, which trims low-mid mud only when it builds up.</li>
+        <li><b>Cabinet</b>: Open 1x12, Classic 2x12 or Closed 4x12, or load your own impulse responses (two slots with a blend).</li>
+      </ul></div>
+      <div class="card c2"><h3>Delay</h3><ul>
+        <li>Repeats that get darker as they fade; time changes glide like tape instead of clicking.</li>
+        <li>Sine or Tape modulation, Ducking, Ping-Pong, and sync to your DAW tempo (or Tap tempo in the app).</li>
+      </ul></div>
+      <div class="card c2"><h3>Reverb</h3><ul>
+        <li>Early reflections and a dense, smooth tail without metallic ringing.</li>
+        <li>Ducking lets it bloom when you stop playing; a Low Cut keeps the low end clear.</li>
+      </ul></div>
+      <div class="card"><h3>Auto Level</h3><p>Keeps the output as loud as the input whenever you change presets or settings, so you can compare tones without louder sounding better. It depends only on the settings, so the same settings always sound the same.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="app">
+    <h2 id="app">Play through the standalone app</h2>
+    <p class="lead">The same sound, controls and presets without a DAW: plug in your guitar and play.</p>
+    <ol class="steps">
+      <li>Install your sound card's ASIO driver, open the app and choose Options → Audio/MIDI Settings…</li>
+      <li>Set the device type to ASIO, pick your card, turn on the input your guitar is plugged into and choose your headphone or monitor outputs.</li>
+      <li>Set the buffer to 64–128 samples for low latency (raise it if you hear crackles).</li>
+      <li>Untick Mute audio input. The app remembers your device and settings next time.</li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="install">
+    <h2 id="install">Install the plugin</h2>
+    <ol class="steps">
+      <li>Download <code>CleanToneStudio-x.y.z-win64.zip</code> from the <a href="https://github.com/aloomens/clean-tone-studio/releases/latest">latest release</a> and unzip it.</li>
+      <li>Double-click <code>Install VST3.bat</code> and click Yes when Windows asks for permission. (Or copy the <code>Clean Tone Studio.vst3</code> folder into <code>C:\Program Files\Common Files\VST3</code>.)</li>
+      <li>Rescan plugins in your DAW and put Clean Tone Studio on your guitar track.</li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="specs">
+    <h2 id="specs">Details</h2>
+    <table class="specs">
+      <tr><th>System</th><td>Windows, 64-bit. Any VST3 host; the app supports ASIO and Windows audio.</td></tr>
+      <tr><th>Presets</th><td>Studio Clean, Glassy Single Coil, Warm Jazz Humbucker, Humbucker Chime, Funk Snap, Endless Sustain, Ambient Swell and DI Clean (No Cab), plus your own.</td></tr>
+      <tr><th>Gain staging</th><td>Set your interface so the guitar peaks around −12 dBFS; that's the level Auto Level and the compressor are tuned for.</td></tr>
+      <tr><th>First start</th><td>Windows SmartScreen may warn that the app is from an unknown publisher (it isn't code-signed): click More info → Run anyway.</td></tr>
+      <tr><th>License</th><td>Free software under the GNU AGPLv3. Copyright © 2026 Al Oomens. Use it for anything; if you share it, include the source zip. No warranty.</td></tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Also free: <a href="../open-vocal-studio/">Open Vocal Studio</a> for lead vocals · <a href="../open-mastering-studio/">Open Mastering Studio</a> for mastering.</p>
+    <p>Made by Al Oomens. <a href="https://github.com/aloomens/clean-tone-studio">Source code</a> · <a href="https://github.com/aloomens/clean-tone-studio/blob/main/LICENSE.txt">License (AGPLv3)</a> · <a href="https://github.com/aloomens/clean-tone-studio/issues">Report a problem</a></p>
+    <p>VST is a registered trademark of Steinberg Media Technologies GmbH. ASIO is a trademark of Steinberg Media Technologies GmbH.</p>
+  </div>
+</footer>
+</body>
+</html>
