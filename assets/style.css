@@ -60,6 +60,7 @@ a:hover { color: var(--title); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .btn.primary:hover { filter: brightness(1.08); color: var(--accent-ink); }
 .actions .note { color: var(--dim); font-size: .88rem; }
+.beta-note { color: var(--dim); font-size: .88rem; margin: 14px 0 0; max-width: 46rem; }
 
 /* ---- Screenshot ---- */
 .shot { margin: 8px 0 0; }
